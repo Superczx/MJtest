@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "681104022208",
+    "project_id": "matchjourney3d",
+    "storage_bucket": "matchjourney3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681104022208:ios:0179bfba575208a018eb25",
+        "android_client_info": {
+          "package_name": "com.example.tengchuang.matchjourney3d"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyACrgzQiKaQECBwV7BpQORxCHSlH-AXfQ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
