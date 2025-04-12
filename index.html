@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Match Journey 3D</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
+<<<<<<< HEAD
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
@@ -76,20 +75,25 @@
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
 
+=======
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+    <canvas id="unity-canvas" width=600 height=960 tabindex="-1" style="width: 600px; height: 960px; background: url('Build/MJH5Test.jpg') center / cover"></canvas>
+    <script src="Build/MJH5Test.loader.js"></script>
+    <script>
+>>>>>>> 6613f851ad55dfd09a1f92f4fd9ef254b87a80c0
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
-
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
 
+<<<<<<< HEAD
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
@@ -118,6 +122,22 @@
 
       document.body.appendChild(script);
 
+=======
+        document.body.style.textAlign = "left";
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/MJH5Test.data",
+        frameworkUrl: "Build/MJH5Test.framework.js",
+        codeUrl: "Build/MJH5Test.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Match Journey 3D",
+        productVersion: "1.20",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+>>>>>>> 6613f851ad55dfd09a1f92f4fd9ef254b87a80c0
     </script>
   </body>
 </html>
